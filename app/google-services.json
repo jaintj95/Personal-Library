@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "773301223340",
+    "firebase_url": "https://personal-library-b27df.firebaseio.com",
+    "project_id": "personal-library-b27df",
+    "storage_bucket": "personal-library-b27df.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:773301223340:android:1b8359dcd84cda8a",
+        "android_client_info": {
+          "package_name": "com.tj.personallibrary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "773301223340-tcrmk3fotb1v8l0e9q9p40v2m30nfmsa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjp52KVX6ql1gk957eEOpVf11IWP_zq08"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
