@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="book_type_array">
+        <item>Paperback</item>
+        <item>Hardcover</item>
+        <item>eBook</item>
+        <item>Audio Book</item>
+    </string-array>
+</resources>
