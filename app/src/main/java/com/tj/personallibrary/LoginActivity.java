@@ -75,9 +75,11 @@ public class LoginActivity extends AppCompatActivity{
                         else
                         {
                             Log.d("LoginActivity","Login failed.");
-                            Toast.makeText(LoginActivity.this,"                 Login failed.\nUsername or Password incorrect.",Toast.LENGTH_SHORT);
+                            Toast.makeText(LoginActivity.this,"                 Login failed.\nUsername or Password incorrect.",Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
+
+
     }
 }
