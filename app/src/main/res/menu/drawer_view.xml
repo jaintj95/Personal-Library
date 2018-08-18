@@ -2,17 +2,24 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/nav_wishlist"
+            android:icon="@drawable/ic_baseline_bookmarks"
+            android:title="Wishlist"/>
+
+        <item
+            android:id="@+id/nav_reviews"
             android:icon="@drawable/ic_review"
             android:title="Reviews" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_review"
+            android:id="@+id/nav_Contact"
+            android:icon="@drawable/ic_baseline_contact"
             android:title="Contact" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_review"
-            android:title="About" />
+
+        <!--<item-->
+            <!--android:id="@+id/nav_about"-->
+            <!--android:icon="@drawable/ic_review"-->
+            <!--android:title="About" />-->
+
 
     </group>
 </menu>

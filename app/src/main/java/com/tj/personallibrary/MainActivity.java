@@ -2,8 +2,10 @@ package com.tj.personallibrary;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -25,6 +27,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+//        ActionBar actionbar = getSupportActionBar();
+//        actionbar.setDisplayHomeAsUpEnabled(true);
+//        actionbar.setHomeAsUpIndicator(R.drawable.ic_menu);
 
         mEmailField = findViewById(R.id.edit_text_email);
         mPasswordField = findViewById(R.id.edit_text_password);
@@ -59,6 +68,11 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
+        if(password.length() < 6)
+        {
+            Toast.makeText(this,"  Password needs to be \natleast 6 characters long",Toast.LENGTH_LONG).show();
+            return;
+        }
         Log.d("FirebaseRegistration","Email is " +email);
         Log.d("FirebaseRegistration", "Password is " +password);
 
@@ -69,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()) {
                             Log.d("FirebaseRegistration", "create user success.");
-
+                            Toast.makeText(MainActivity.this,"Registration Successful. You can login now",Toast.LENGTH_SHORT).show();
                         }
                         else
                         {
