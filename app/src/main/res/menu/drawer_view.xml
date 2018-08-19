@@ -15,10 +15,10 @@
             android:icon="@drawable/ic_baseline_contact"
             android:title="Contact" />
 
-        <!--<item-->
-            <!--android:id="@+id/nav_about"-->
-            <!--android:icon="@drawable/ic_review"-->
-            <!--android:title="About" />-->
+        <item
+            android:id="@+id/nav_SignOut"
+            android:icon="@drawable/ic_signout"
+            android:title="Sign Out" />
 
 
     </group>

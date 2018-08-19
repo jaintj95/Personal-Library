@@ -2,10 +2,14 @@ package com.tj.personallibrary;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -25,6 +29,11 @@ public class AddBookActivity extends AppCompatActivity{
 
     private Map<String,Book> bookMap = new HashMap<>();
 
+    private DrawerLayout mDrawerLayout;
+
+    private NavigationView mNavigationView;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +45,20 @@ public class AddBookActivity extends AppCompatActivity{
         ActionBar actionbar = getSupportActionBar();
         actionbar.setDisplayHomeAsUpEnabled(true);
         actionbar.setHomeAsUpIndicator(R.drawable.ic_menu);
+
+        mDrawerLayout = findViewById(R.id.drawer_layout);
+
+        mNavigationView = findViewById(R.id.nav_view);
+
+        mNavigationView.setNavigationItemSelectedListener(
+                new NavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(MenuItem menuItem) {
+                        // Handle menu item clicks here.
+                        mDrawerLayout.closeDrawers();  // CLOSE DRAWER
+                        return true;
+                    }
+                });
 
         mAddButton = findViewById(R.id.button_add_book);
         mBookNameField = findViewById(R.id.edit_text_book);
@@ -78,6 +101,16 @@ public class AddBookActivity extends AppCompatActivity{
 //
 //            }
 //        });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                mDrawerLayout.openDrawer(GravityCompat.START);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private void addBook()

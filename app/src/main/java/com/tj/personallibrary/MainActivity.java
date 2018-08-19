@@ -84,6 +84,9 @@ public class MainActivity extends AppCompatActivity {
                         if(task.isSuccessful()) {
                             Log.d("FirebaseRegistration", "create user success.");
                             Toast.makeText(MainActivity.this,"Registration Successful. You can login now",Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(MainActivity.this,HomeActivity.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                            startActivity(intent);
                         }
                         else
                         {
