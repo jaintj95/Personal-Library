@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <group android:checkableBehavior="single">
+    <group android:id="@+id/group1" android:checkableBehavior="single">
         <item
             android:id="@+id/nav_wishlist"
             android:icon="@drawable/ic_baseline_bookmarks"
@@ -10,6 +10,8 @@
             android:id="@+id/nav_reviews"
             android:icon="@drawable/ic_review"
             android:title="Reviews" />
+    </group>
+    <group android:id="@+id/group2" android:checkableBehavior="single">
         <item
             android:id="@+id/nav_Contact"
             android:icon="@drawable/ic_baseline_contact"
@@ -19,7 +21,5 @@
             android:id="@+id/nav_SignOut"
             android:icon="@drawable/ic_signout"
             android:title="Sign Out" />
-
-
     </group>
 </menu>

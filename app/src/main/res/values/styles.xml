@@ -15,6 +15,10 @@
         <item name="titleTextColor">@android:color/white</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+
+        <!--the item below is used to change the color of the navigation view divider-->
+        <item name="android:listDivider">@color/listDivider</item>
+
     </style>
 
 </resources>

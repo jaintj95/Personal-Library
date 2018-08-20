@@ -15,6 +15,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -40,25 +41,26 @@ public class AddBookActivity extends AppCompatActivity{
         setContentView(R.layout.activity_add_book);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle("Add Books");
         setSupportActionBar(toolbar);
 
         ActionBar actionbar = getSupportActionBar();
         actionbar.setDisplayHomeAsUpEnabled(true);
         actionbar.setHomeAsUpIndicator(R.drawable.ic_menu);
-
-        mDrawerLayout = findViewById(R.id.drawer_layout);
-
-        mNavigationView = findViewById(R.id.nav_view);
-
-        mNavigationView.setNavigationItemSelectedListener(
-                new NavigationView.OnNavigationItemSelectedListener() {
-                    @Override
-                    public boolean onNavigationItemSelected(MenuItem menuItem) {
-                        // Handle menu item clicks here.
-                        mDrawerLayout.closeDrawers();  // CLOSE DRAWER
-                        return true;
-                    }
-                });
+//
+//        mDrawerLayout = findViewById(R.id.drawer_layout);
+//
+//        mNavigationView = findViewById(R.id.nav_view);
+//
+//        mNavigationView.setNavigationItemSelectedListener(
+//                new NavigationView.OnNavigationItemSelectedListener() {
+//                    @Override
+//                    public boolean onNavigationItemSelected(MenuItem menuItem) {
+//                        // Handle menu item clicks here.
+//                        mDrawerLayout.closeDrawers();  // CLOSE DRAWER
+//                        return true;
+//                    }
+//                });
 
         mAddButton = findViewById(R.id.button_add_book);
         mBookNameField = findViewById(R.id.edit_text_book);
@@ -68,17 +70,17 @@ public class AddBookActivity extends AppCompatActivity{
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                addBook();
+                //addBook();
                 finish();
             }
         });
 
-//        mAddButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                addBook();
-//            }
-//        });
+        mAddButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addBook();
+            }
+        });
 
         spinner = findViewById(R.id.book_format_spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -102,16 +104,16 @@ public class AddBookActivity extends AppCompatActivity{
 //            }
 //        });
     }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                mDrawerLayout.openDrawer(GravityCompat.START);
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        switch (item.getItemId()) {
+//            case android.R.id.home:
+//                mDrawerLayout.openDrawer(GravityCompat.START);
+//                return true;
+//        }
+//        return super.onOptionsItemSelected(item);
+//    }
 
     private void addBook()
     {
@@ -121,6 +123,9 @@ public class AddBookActivity extends AppCompatActivity{
         String format = spinner.getSelectedItem().toString();
         Log.d("AddBook","Book- " + book + "\nAuthor- " + author + "\nFormat- " +format);
         bookMap.put(book,new Book(book,author,format));
+        Toast.makeText(this, "Book added", Toast.LENGTH_SHORT).show();
+        mBookNameField.setText("");
+        mAuthorField.setText("");
     }
 }
 

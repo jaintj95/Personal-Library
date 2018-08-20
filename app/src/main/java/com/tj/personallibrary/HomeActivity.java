@@ -13,6 +13,8 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -48,7 +50,7 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
 
-
+        //Create hamburger menu and display it
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -148,4 +150,11 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intent);
         Toast.makeText(this,"Successfully logged out",Toast.LENGTH_SHORT).show();
     }
+
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        MenuInflater menuInflater = new MenuInflater(this);
+//        menuInflater.inflate(R.id.nav_menu,menu);
+//        return super.onCreateOptionsMenu(menu);
+//    }
 }
