@@ -14,18 +14,40 @@
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
 
 
-    <EditText
-        android:id="@+id/edit_text_login_email"
+    <!--<EditText-->
+    <!--android:id="@+id/edit_text_login_email"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="48dp"-->
+    <!--android:layout_marginLeft="16dp"-->
+    <!--android:layout_marginRight="16dp"-->
+    <!--android:layout_marginTop="64dp"-->
+    <!--android:background="@drawable/rounded_edittext"-->
+    <!--android:hint="Email"-->
+    <!--android:inputType="textEmailAddress"-->
+    <!--android:paddingLeft="16dp"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/toolbar" />-->
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/email_input_layout_login"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="96dp"
         android:background="@drawable/rounded_edittext"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:paddingLeft="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/edit_text_login_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+
+    </android.support.design.widget.TextInputLayout>
 
     <!--<EditText-->
     <!--android:id="@+id/edit_text_login_password"-->
@@ -41,16 +63,16 @@
     <!--app:layout_constraintTop_toBottomOf="@+id/edit_text_login_email" />-->
 
     <android.support.design.widget.TextInputLayout
-        android:id="@+id/text_input_layout_login"
+        android:id="@+id/password_input_layout_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:background="@drawable/rounded_edittext"
         android:paddingLeft="8dp"
         android:paddingRight="8dp"
-        app:layout_constraintEnd_toEndOf="@+id/edit_text_login_email"
-        app:layout_constraintStart_toStartOf="@+id/edit_text_login_email"
-        app:layout_constraintTop_toBottomOf="@+id/edit_text_login_email"
+        app:layout_constraintEnd_toEndOf="@+id/email_input_layout_login"
+        app:layout_constraintStart_toStartOf="@+id/email_input_layout_login"
+        app:layout_constraintTop_toBottomOf="@+id/email_input_layout_login"
         app:passwordToggleEnabled="true">
 
         <EditText
@@ -70,9 +92,9 @@
         android:background="@drawable/rounded_button"
         android:text="Login"
         android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="@+id/text_input_layout_login"
-        app:layout_constraintStart_toStartOf="@+id/text_input_layout_login"
-        app:layout_constraintTop_toBottomOf="@+id/text_input_layout_login" />
+        app:layout_constraintEnd_toEndOf="@+id/password_input_layout_login"
+        app:layout_constraintStart_toStartOf="@+id/password_input_layout_login"
+        app:layout_constraintTop_toBottomOf="@+id/password_input_layout_login" />
 
     <TextView
         android:id="@+id/textView_backToRegister"

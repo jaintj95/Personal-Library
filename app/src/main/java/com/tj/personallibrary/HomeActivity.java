@@ -143,12 +143,12 @@ public class HomeActivity extends AppCompatActivity {
 
     private void signOut()
     {
-        FirebaseAuth auth = FirebaseAuth.getInstance();
-        auth.signOut();
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        mAuth.signOut();
         Intent intent = new Intent(HomeActivity.this,LoginActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
-        Toast.makeText(this,"Successfully logged out",Toast.LENGTH_SHORT).show();
+       // Toast.makeText(this,"Successfully logged out",Toast.LENGTH_SHORT).show();
     }
 
 //    @Override

@@ -43,7 +43,8 @@ public class LoginActivity extends AppCompatActivity{
         backToRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
+                Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -79,6 +80,7 @@ public class LoginActivity extends AppCompatActivity{
                         {
                             Log.d("LoginActivity","Sign in successful");
                             Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                             LoginActivity.this.startActivity(intent);
                         }
 
