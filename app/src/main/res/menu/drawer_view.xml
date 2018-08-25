@@ -7,13 +7,18 @@
             android:title="Wishlist"/>
 
         <item
+            android:id="@+id/nav_quotes"
+            android:icon="@drawable/ic_baseline_quote"
+            android:title="Quotes"/>
+
+        <item
             android:id="@+id/nav_reviews"
             android:icon="@drawable/ic_review"
             android:title="Reviews" />
     </group>
     <group android:id="@+id/group2" android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_Contact"
+            android:id="@+id/nav_contact"
             android:icon="@drawable/ic_baseline_contact"
             android:title="Contact" />
 

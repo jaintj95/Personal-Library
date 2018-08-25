@@ -41,7 +41,7 @@ public class AddBookActivity extends AppCompatActivity{
         setContentView(R.layout.activity_add_book);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle("Add Books");
+        toolbar.setTitle("Add Books ");
         setSupportActionBar(toolbar);
 
         ActionBar actionbar = getSupportActionBar();

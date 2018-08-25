@@ -33,8 +33,9 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_signout" />
-                            <entry key="sourceFile" value="D:\Downloads\baseline-menu-24px.svg" />
+                            <entry key="assetSourceType" value="FILE" />
+                            <entry key="outputName" value="ic_baseline_quote" />
+                            <entry key="sourceFile" value="D:\Downloads\baseline-format_quote-24px.svg" />
                           </map>
                         </option>
                       </PersistentState>

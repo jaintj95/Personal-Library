@@ -83,6 +83,13 @@ public class HomeActivity extends AppCompatActivity {
                                 signOut();
                                 break;
                             }
+
+                            case R.id.nav_quotes:
+                            {
+                                Intent intent = new Intent(HomeActivity.this,QuotesActivity.class);
+                                startActivity(intent);
+                                break;
+                            }
                         }
 
                         mDrawerLayout.closeDrawers();  // CLOSE DRAWER
