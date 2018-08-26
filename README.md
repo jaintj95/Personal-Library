@@ -1,6 +1,6 @@
 # Personal-Library
 Book Tracker app for Android
-Featues:
+Features:  
 1) Add books to Wishlist
 2) Add favourite Quotes
 3) Firebase Integration
