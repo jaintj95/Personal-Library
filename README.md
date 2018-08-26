@@ -1,5 +1,7 @@
 # Personal-Library
 Book Tracker app for Android  
+
+NOTE: I've moved the project to private BitBucket repository now. I am still actively working on it.
   
 Features:  
 1) Add books to Wishlist
