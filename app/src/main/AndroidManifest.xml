@@ -23,9 +23,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity"></activity>
-        <activity android:name=".AddBookActivity"></activity>
-        <activity android:name=".QuotesActivity"></activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".AddBookActivity" />
+        <activity android:name=".DisplayQuotesActivity" />
+        <activity android:name=".AddQuotesActivity" />
+        <activity android:name=".WishlistActivity"></activity>
     </application>
 
 </manifest>
